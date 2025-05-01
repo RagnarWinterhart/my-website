@@ -7,12 +7,17 @@ body {
     background-color: #d1bb82;
 }
 
-/* TYPE SELECTOR */
-blockquote {
-    font-size: 90%;
+:root {
+    --red-color: #5d0006;
 }
 
-img {
+/* TYPE SELECTOR */
+blockquote {
+    font-size: 120%;
+    color: #636325;
+}
+
+#cover_img {
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
@@ -21,18 +26,35 @@ img {
 
 h1 {
     font-family: sans-serif;
-    color: #5d0006;
+    color: var(--red-color);
     font-weight: 800;
 }
+
 h2 {
-    color: #5d0006;
+    color: var(--red-color);
     font-family: sans-serif;
     font-weight: 500;
+}
+
+h3,
+p,
+li,
+blockquote {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav {
     clear: left;
 }
+
+ul a {
+    color: #025602;
+}
+
+a:hover {
+    color: var(--red-color);
+}
+
 
 /* ID SELECTOR
 #git_header {
