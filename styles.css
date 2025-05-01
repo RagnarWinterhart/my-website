@@ -1,0 +1,47 @@
+/* UNIVERSAL SELECTOR 
+* {
+    
+}
+*/
+body {
+    background-color: #d1bb82;
+}
+
+/* TYPE SELECTOR */
+blockquote {
+    font-size: 90%;
+}
+
+img {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-left: -1em;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #5d0006;
+    font-weight: 800;
+}
+h2 {
+    color: #5d0006;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.nav {
+    clear: left;
+}
+
+/* ID SELECTOR
+#git_header {
+    color: red;
+}
+*/
+
+/* CLASS SELECTOR
+.first_step {
+    color: teal;
+}
+*/
