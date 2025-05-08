@@ -2,19 +2,39 @@
 * {
     
 }
-*/
-body {
-    background-color: #d1bb82;
-}
 
 :root {
+  height: 100%;
+  font-family:Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, red 0%, white 100%);
+}
+
+body {
+  background-color: #ffd7d7;
+  padding: 100px 150px 100px;
+  margin: 100px 200px 100px;
+  border: 10px dashed white;
+  border-radius: 100px;
+}
+*/
+:root {
     --red-color: #5d0006;
+    background-color: #636325;
+    background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
+}
+
+body {
+    background-color: #e6c569; 
+    margin: 100px;
+    padding: 0px 100px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 100px;
+
 }
 
 /* TYPE SELECTOR */
 blockquote {
     font-size: 120%;
-    color: #636325;
 }
 
 #cover_img {
@@ -22,12 +42,14 @@ blockquote {
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: -1em;
+    border: 5px solid #303830;
 }
 
 h1 {
     font-family: sans-serif;
     color: var(--red-color);
     font-weight: 800;
+    text-align: center;
 }
 
 h2 {
@@ -47,6 +69,9 @@ blockquote {
     clear: left;
 }
 
+ul {
+    padding-left: 2em;
+}
 ul a {
     color: #025602;
 }
@@ -54,6 +79,7 @@ ul a {
 a:hover {
     color: var(--red-color); 
 }
+
 
 
 /* ID SELECTOR
