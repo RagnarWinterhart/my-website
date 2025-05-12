@@ -40,6 +40,7 @@ blockquote {
 }
 
 #cover_img {
+    width: 50%;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
