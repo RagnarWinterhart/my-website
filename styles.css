@@ -22,13 +22,14 @@ body {
     background-color: #636325;
     background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
 }
+
 header {
     background-color: #989696;
     padding: 3em;
     border: 10px solid rgb(0, 0, 0);
     border-radius: 10px;
     text-align: center;
-}  
+}
 
 main {
     background-color: #e6c569;
@@ -50,12 +51,11 @@ img {
 }
 
 #cover_img {
-    width: 50%;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: -1em;
-    
+
 }
 
 h1 {
