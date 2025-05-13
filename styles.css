@@ -51,11 +51,12 @@ img {
 }
 
 #cover_img {
+    width: 50%;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: -1em;
-
+    border: 5px solid #303830;
 }
 
 h1 {
