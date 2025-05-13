@@ -22,14 +22,20 @@ body {
     background-color: #636325;
     background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
 }
-
-body {
-    background-color: #e6c569;
-    margin: 100px;
-    padding: 0px 100px 100px;
+header {
+    background-color: #989696;
+    padding: 3em;
     border: 10px solid rgb(0, 0, 0);
-    border-radius: 100px;
+    border-radius: 10px;
+    text-align: center;
+}  
 
+main {
+    background-color: #e6c569;
+    margin: 50px;
+    padding: 100px 100px 100px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
 /* TYPE SELECTOR */
@@ -39,13 +45,17 @@ blockquote {
 
 }
 
+img {
+    border: 5px solid #303830;
+}
+
 #cover_img {
     width: 50%;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: -1em;
-    border: 5px solid #303830;
+    
 }
 
 h1 {
@@ -68,8 +78,24 @@ blockquote {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.nav {
+.clearimg {
     clear: left;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    float: center;
 }
 
 ul {
@@ -92,16 +118,3 @@ footer {
     text-align: right;
     font-size: 70%;
 }
-
-
-/* ID SELECTOR
-#git_header {
-    color: red;
-}
-*/
-
-/* CLASS SELECTOR
-.first_step {
-    color: teal;
-}
-*/
