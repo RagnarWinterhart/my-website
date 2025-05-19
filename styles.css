@@ -1,62 +1,50 @@
-/* UNIVERSAL SELECTOR 
-* {
-    
-}
-
-:root {
-  height: 100%;
-  font-family:Arial, Helvetica, sans-serif;
-  background: linear-gradient(120deg, red 0%, white 100%);
-}
-
-body {
-  background-color: #ffd7d7;
-  padding: 100px 150px 100px;
-  margin: 100px 200px 100px;
-  border: 10px dashed white;
-  border-radius: 100px;
-}
-*/
+/* CSS Document */
+/* CSS for the entire site, all pages */
 :root {
     --red-color: #5d0006;
     background-color: #636325;
     background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
 }
 
+/* styling for header block, contains h1 and nav bar */
 header {
     background-color: #989696;
     padding: 3em;
-    border: 10px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    border: 1em solid rgb(0, 0, 0);
+    border-radius: 1em;
     text-align: center;
 }
 
 main {
     background-color: #e6c569;
-    margin: 50px;
-    padding: 100px 100px 100px;
-    border: 10px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    margin: 1em;
+    padding: 3em;
+    border: 1em solid rgb(0, 0, 0);
+    border-radius: 1em;
 }
 
-/* TYPE SELECTOR */
+/* Styles the blockquote on home */
 blockquote {
     font-size: 120%;
-    padding: 65px 0px 0px 210px;
+    text-align: center;
+    padding: 5em 0em 5em 5em;
 
 }
 
 img {
-    border: 5px solid #303830;
+    border: .5em solid #303830;
+    width: 100%;
+
 }
 
+/* formatting specifically for the img on home page */
 #cover_img {
     width: 50%;
+    min-width: 200px;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
-    margin-left: -1em;
-    border: 5px solid #303830;
+    margin-left: -2em;
 }
 
 h1 {
@@ -79,25 +67,15 @@ blockquote {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* class to clear specific elements of an image, probably temporary until final formatting has been decided */
 .clearimg {
     clear: left;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    float: center;
-}
+/* code for future use to highlight current page by inserting this class into the <a> tag for the current page in the nav bar */
+/* #nav_menu ul li a.current {
+    background-color: #ba2a2a;
+} */
 
 ul {
     padding-left: 2em;
@@ -115,7 +93,50 @@ a:hover {
     column-count: 2;
 }
 
+/* footer styling, want to make this its own bar(like the header) eventually  */
 footer {
     text-align: right;
     font-size: 70%;
 }
+
+/* formatting and styles for navigation bars  */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    float: center;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        background-color: #b769ff;
+    }
+
+    header {
+        background-color: #ff7d69;
+    }
+
+    #cover_img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+    main {
+        background-color: #ff7d69;
+    }
+
+    header {
+        background-color: #ff7d69;
+    }
+}
+
