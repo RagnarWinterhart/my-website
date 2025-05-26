@@ -6,12 +6,15 @@
     background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 /* styling for header block, contains h1 and nav bar */
 header {
     background-color: #989696;
-    padding: 3em;
-    border: 1em solid rgb(0, 0, 0);
-    border-radius: 1em;
+    padding: 1em 0 0 0;
     text-align: center;
 }
 
@@ -46,12 +49,14 @@ img {
     margin-bottom: 1em;
     margin-left: -2em;
 }
-
+/* font style rules */
 h1 {
     font-family: sans-serif;
     color: var(--red-color);
     font-weight: 800;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 h2 {
@@ -89,8 +94,19 @@ a:hover {
     color: var(--red-color);
 }
 
-.column {
-    column-count: 2;
+/* formatting into columns and rows */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    flex: 0 0 50%;
+    /* 2 columns */
+    box-sizing: border-box;
+    padding: .5em;
+    border: 1px solid #000000;
 }
 
 /* footer styling, want to make this its own bar(like the header) eventually  */
@@ -103,39 +119,109 @@ footer {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background: #000000;
+
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    background-color: #c4c4c4;
+    padding: 1em;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+    font-size: 100%;
 }
+
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    float: center;
+    color: var(--red-color);
+    padding: 1em 2em;
 }
 
-@media only screen and (max-width: 900px) and (min-width: 720px) {
-    main {
-        background-color: #ff7d69;
+nav ul li:hover {
+    background-color: rgb(131, 131, 131);
+}
+
+/* grid layout for character pages */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+}
+
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item h2 {
+    color: #9d4ad1;
+    margin-top: 0;
+}
+
+.grid-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    /* stacks grid elements in a single column */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
     }
 
-    header {
-        background-color: #ff7d69;
+    /* stacks flex elements in a single column*/
+    .item {
+        flex: 0 0 100%;
+        /* 1 column */
+    }
+
+    /* vertically stacks nav menu */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        flex: none;
+        text-align: center;
+        padding: 1em;
     }
 }
 
-@media only screen and (max-width: 720px) {
-    main {
-        background-color: #b769ff;
-    }
-
-    header {
-        background-color: #ff7d69;
-    }
-
+@media only screen and (max-width: 770px) {
+    /* removoes cover image */
     #cover_img {
         display: none;
+    }
+    /* fixes quote formatting at small size */
+    blockquote {
+        padding: 4em;
+        margin: 0;
+        float: left;
     }
 }
