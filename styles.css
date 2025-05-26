@@ -49,6 +49,7 @@ img {
     margin-bottom: 1em;
     margin-left: -2em;
 }
+
 /* font style rules */
 h1 {
     font-family: sans-serif;
@@ -214,10 +215,12 @@ nav ul li:hover {
 }
 
 @media only screen and (max-width: 770px) {
+
     /* removoes cover image */
     #cover_img {
         display: none;
     }
+
     /* fixes quote formatting at small size */
     blockquote {
         padding: 4em;
