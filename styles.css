@@ -2,25 +2,34 @@
 /* CSS for the entire site, all pages */
 :root {
     --red-color: #5d0006;
-    background-color: #636325;
-    background: linear-gradient(180deg, #3ca11d00 0%, #000000 100%), url("img/map.jpg");
+
 }
 
 body {
     padding: 0;
     margin: 0;
+    background-color: #e0e000;
+    background: linear-gradient(180deg, #23461800 0%, #000000 100%), url(img/map.jpg);
+    min-height: 100vh;
 }
 
 /* styling for header block, contains h1 and nav bar */
 header {
     background-color: #989696;
-    padding: 1em 0 0 0;
+    padding: 1.5em 0 0 0;
     text-align: center;
 }
 
+/* footer styling, want to make this its own bar(like the header) eventually  */
+footer {
+    text-align: right;
+    font-size: 70%;
+}
+
 main {
-    background-color: #e6c569;
-    margin: 1em;
+
+    background-color: #989696;
+    margin: 3em;
     padding: 3em;
     border: 1em solid rgb(0, 0, 0);
     border-radius: 1em;
@@ -31,14 +40,14 @@ blockquote {
     font-size: 120%;
     text-align: center;
     padding: 5em 0em 5em 5em;
-
+    color: #f6d500;
 }
 
 img {
     border: .5em solid #303830;
     width: 100%;
-
 }
+
 
 /* formatting specifically for the img on home page */
 #cover_img {
@@ -48,6 +57,7 @@ img {
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: -2em;
+    border: none;
 }
 
 /* font style rules */
@@ -78,16 +88,13 @@ blockquote {
     clear: left;
 }
 
-/* code for future use to highlight current page by inserting this class into the <a> tag for the current page in the nav bar */
-/* #nav_menu ul li a.current {
-    background-color: #ba2a2a;
-} */
+/* styles for unordered lists and links */
 
 ul {
     padding-left: 2em;
 }
 
-ul a {
+a {
     color: #025602;
 }
 
@@ -95,26 +102,92 @@ a:hover {
     color: var(--red-color);
 }
 
-/* formatting into columns and rows */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-
+/* formatting for leadeship desc page */
+.role-container {
+    display: grid;
+    gap: 1.5em;
+    padding: 2em;
 }
 
 .item {
-    flex: 0 0 50%;
-    /* 2 columns */
-    box-sizing: border-box;
-    padding: .5em;
-    border: 1px solid #000000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    grid-template-columns: 1fr;
 }
 
-/* footer styling, want to make this its own bar(like the header) eventually  */
-footer {
-    text-align: right;
-    font-size: 70%;
+.item:hover {
+    transform: scale(1.03);
 }
+
+.item h2 {
+    margin-top: 0;
+    font-size: 1.25em;
+}
+
+.item h3 {
+    margin: 0.5em 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.item p {
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* styles for home page character and kingdom section */
+.details-container {
+    display: flex;
+    gap: 2em;
+    padding: 2em 0;
+    flex-wrap: wrap;
+    clear: left;
+}
+
+.characters-section,
+.kingdom-section {
+    flex: 1 1 30%;
+    min-width: 0;
+}
+
+.characters-section ul {
+    font-size: 150%;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.character-grid a {
+    display: block;
+    padding: 0.75em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--red-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.character-grid ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.character-grid a:hover {
+    background-color: #c4c4c4;
+}
+
 
 /* formatting and styles for navigation bars  */
 nav ul {
@@ -122,29 +195,35 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    background: #000000;
+    /* background: #000000; */
 
 }
 
 nav ul li {
-    background-color: #c4c4c4;
+    flex: 1;
+    /* background-color: #c4c4c4; */
     padding: 1em;
-    flex: 1 1 auto;
     min-width: 0;
     white-space: nowrap;
-    /* Prevent text from wrapping to the next line */
     font-size: 100%;
 }
 
 
 nav ul li a {
+    padding: 1em 2em;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
     text-decoration: none;
     color: var(--red-color);
-    padding: 1em 2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li:hover {
-    background-color: rgb(131, 131, 131);
+nav ul li a:hover {
+    background-color: #ccc;
 }
 
 /* grid layout for character pages */
@@ -169,7 +248,7 @@ nav ul li:hover {
 }
 
 .grid-item h2 {
-    color: #9d4ad1;
+    color: var(--red-color);
     margin-top: 0;
 }
 
@@ -181,8 +260,6 @@ nav ul li:hover {
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-
-
 }
 
 
@@ -226,5 +303,9 @@ nav ul li:hover {
         padding: 4em;
         margin: 0;
         float: left;
+    }
+
+    .details-container {
+        flex-direction: column;
     }
 }
