@@ -4,6 +4,11 @@ This website is to be a sort of wiki or reference sheet for the kingmaker game i
 
 It details some of the statistics of the kingdom as long as the characters that are a part of the game.S
 
+## IMPORTANT
+1. fix break point at 500px on home page where characters overflow off bottom of main section.
+2. replace boxes with character names with pictures
+3. finish filling out all the content NO MORE LOREM IPSUM
+
 ## TODO FROM PEER REVIEW
 1. It could be helpful to increase the font size for the text that describes the Kingdom and its details on the homepage, and switching the font to be on top might also be a nice way to grab someone’s attention. !!!
 
@@ -15,6 +20,12 @@ It details some of the statistics of the kingdom as long as the characters that 
 
 5. Your navigation bar correlates very well with the color scheme you have throughout your pages. One recommendation I have, however, is that of making the title pop out more. For example, using a lighter shade of red or a different font would draw more attention. !!!
 
-1. Your leaders and companion pages seem very detailed. One recommendation I have, however, is to add images of the characters you include. !!!
+6. Your leaders and companion pages seem very detailed. One recommendation I have, however, is to add images of the characters you include. !!!
 
 ## CHANGELOG
+1. Increased text size for kingdom description,
+2. Added header image
+
+4. Readjusted home page breakpoint to shrink image and display above text instead of setting to "display: none"
+5. Changed font and added contrast for title
+6. Added pictures for companions, in process for leaders...

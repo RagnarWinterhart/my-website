@@ -1,8 +1,9 @@
 /* CSS Document */
 /* CSS for the entire site, all pages */
 :root {
-    --red-color: #af000c;
+    --red-color: #9a000a;
     --gray-color: #989696;
+    --tan-color: #f2e8cf;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 /* styling for header block, contains h1 and nav bar */
 header {
-    background-color: var(--red-color); 
+    background-color: var(--red-color);
     background: linear-gradient(90deg, #000000 30%, var(--red-color)70%);
     padding: 1.5em 0 0 0;
     text-align: center;
@@ -32,10 +33,10 @@ footer {
 
 main {
 
-    background-color: #f2e8cf;
+    background-color: var(--tan-color);
     margin: 3em;
     padding: 3em;
-    border: 1em solid rgb(0, 0, 0);
+    border: 1em solid var(--tan-color);
     border-radius: 1em;
 }
 
@@ -48,7 +49,9 @@ blockquote {
 }
 
 img {
-    border: .5em solid #303830;
+    display: block;
+    border: .5em solid #000000;
+    border-radius: 1em;
     width: 100%;
 }
 
@@ -71,6 +74,29 @@ img {
     border: none;
 }
 
+/* formatting for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+th,
+td {
+    padding: 1em;
+    text-align: left;
+    border: #000000 1px solid;
+}
+
+td {
+    background-color: #fff;
+}
+
+thead {
+    background-color: var(--red-color);
+    color: #ffffff;
+}
+
 /* font style rules */
 h1 {
     font-family: 'Brush Script MT', cursive;
@@ -79,15 +105,15 @@ h1 {
     text-align: center;
     padding: 0;
     margin: 0;
-     text-shadow:
-                -2px -2px 0 #feffd7,
-                2px -2px 0 #feffd7,
-                -2px 2px 0 #feffd7,
-                2px 2px 0 #feffd7,
-                -3px 0px 0 #feffd7,
-                3px 0px 0 #feffd7,
-                0px -3px 0 #feffd7,
-                0px 3px 0 #feffd7;
+    text-shadow:
+        -2px -2px 0 var(--tan-color),
+        2px -2px 0 var(--tan-color),
+        -2px 2px 0 var(--tan-color),
+        2px 2px 0 var(--tan-color),
+        -3px 0px 0 var(--tan-color),
+        3px 0px 0 var(--tan-color),
+        0px -3px 0 var(--tan-color),
+        0px 3px 0 var(--tan-color);
 }
 
 h2 {
@@ -130,6 +156,7 @@ a:hover {
     padding: 2em 0;
     flex-wrap: wrap;
     clear: left;
+    width: 100%;
 }
 
 .characters-section,
@@ -144,33 +171,40 @@ a:hover {
 
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: 3;
     gap: 1em;
-    margin-top: 1em;
+    padding: 0;
+    list-style: none;
+    margin: 2em auto;
+}
+
+.character-grid li {
+    width: 100%;
 }
 
 .character-grid a {
-    display: block;
-    padding: 0.75em;
-    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* makes the link square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2e8cf;
     border: 1px solid #ccc;
     border-radius: 6px;
-    text-align: center;
+    color: var(--red-color, #a00);
     text-decoration: none;
-    color: var(--red-color);
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.character-grid ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.character-grid a:hover {
+    background-color: #00000072;
 }
 
-.character-grid a:hover {
-    background-color: #c4c4c4;
-}
 
 
 /* formatting and styles for navigation bars  */
@@ -179,13 +213,10 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    /* background: #000000; */
-
 }
 
 nav ul li {
     flex: 1;
-    /* background-color: #c4c4c4; */
     padding: 0;
     min-width: 0;
     white-space: nowrap;
@@ -196,9 +227,7 @@ nav ul li {
 nav ul li a {
     padding: 1em 2em;
     display: block;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    background-color: var(--tan-color);
     text-align: center;
     text-decoration: none;
     color: var(--red-color);
@@ -207,7 +236,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ccc;
+    background-color: #c1baa7;
 }
 
 /* grid layout for character pages */
@@ -241,10 +270,26 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+.grid-item img {
+    float: right;
+    max-width: 30%;
+    min-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+#roles {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
 
 @media only screen and (max-width: 1000px) {
 
@@ -253,8 +298,21 @@ nav ul li a:hover {
         margin: 0;
         float: center;
     }
-}
 
+    .grid-item img {
+        float: none;
+        display: block;
+        margin: 0 auto 1em auto;
+    }
+}
+@media screen and (max-width: 915px) {
+
+      .details-container {
+        flex-direction: column;
+    }
+
+    
+}
 @media only screen and (max-width: 800px) {
 
     /* stacks grid elements in a single column */
@@ -262,12 +320,6 @@ nav ul li a:hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
 
-    }
-
-    /* stacks flex elements in a single column*/
-    .item {
-        flex: 0 0 100%;
-        /* 1 column */
     }
 
     /* vertically stacks nav menu */
@@ -286,11 +338,11 @@ nav ul li a:hover {
 @media only screen and (max-width: 770px) {
 
     /* removoes cover image */
-       #cover_img {
-        display: block;     
-        width: 100%;       
-        margin: 0 auto;     
-        float: none;        
+    #cover_img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        float: none;
     }
 
     /* fixes quote formatting at small size */
@@ -299,8 +351,32 @@ nav ul li a:hover {
         margin: 0;
         float: left;
     }
+}
 
-    .details-container {
-        flex-direction: column;
-    }
+@media (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+    font-size: 70%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    display: none; /* hide table header on small screens */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1em;
+    top: 0.75em;
+    font-weight: bold;
+  }
 }
