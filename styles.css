@@ -42,7 +42,7 @@ main {
 
 /* Styles the blockquote on home */
 blockquote {
-    font-size: 120%;
+    font-size: 150%;
     text-align: center;
     padding: 5em 0em 5em 5em;
     color: var(--red-color);
@@ -290,7 +290,19 @@ nav ul li a:hover {
     grid-template-rows: auto;
 }
 
+.icon-list {
+    list-style-image:  url(img/house-solid.svg);
+}
 
+
+.google-fonts {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* responsive design rules */
 @media only screen and (max-width: 1000px) {
 
     blockquote {

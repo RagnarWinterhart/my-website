@@ -4,10 +4,17 @@ This website is to be a sort of wiki or reference sheet for the kingmaker game i
 
 It details some of the statistics of the kingdom as long as the characters that are a part of the game.S
 
-## IMPORTANT
+## IMPORTANT BEFORE MONDAY 6/9/2025
+Implement at least one special font from a service like Google Font.Links to an external site.
+Include at least one icon form a service like FontAwesomeLinks to an external site.. (This icon can't just be an emoji.)
+EXTRA CREDIT (0.5pts): Add a favicon to your website that is appropriate for your website's purpose.
+EXTRA CREDIT (1pts): Add a table to your website (table data must be relevant to your websit
+## TODO
 1. fix break point at 500px on home page where characters overflow off bottom of main section.
 2. replace boxes with character names with pictures
 3. finish filling out all the content NO MORE LOREM IPSUM
+
+
 
 ## TODO FROM PEER REVIEW
 1. It could be helpful to increase the font size for the text that describes the Kingdom and its details on the homepage, and switching the font to be on top might also be a nice way to grab someone’s attention. !!!
