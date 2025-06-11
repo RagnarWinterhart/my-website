@@ -6,6 +6,7 @@
     --tan-color: #f2e8cf;
 }
 
+/* body styling */
 body {
     padding: 0;
     margin: 0;
@@ -33,6 +34,7 @@ footer {
     color: #ffffff;
 }
 
+/* main styling */
 main {
 
     background-color: var(--tan-color);
@@ -152,7 +154,7 @@ a:hover {
     color: var(--red-color);
 }
 
-/* styles for home page character and kingdom section */
+/* Styles for kingdom section -- home page */
 .details-container {
     display: flex;
     gap: 2em;
@@ -172,44 +174,39 @@ a:hover {
     font-size: 150%;
 }
 
+/* Styles for character images -- home page */
 .character-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    list-style: none;
     gap: 1em;
     padding: 0;
-    list-style: none;
-    margin: 2em auto;;
-}
-
-.character-grid li {
-    width: 100%;
+    margin: 0;
 }
 
 .character-grid a {
     top: 0;
     left: 0;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    /* makes the link square */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2e8cf;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: var(--red-color, #a00);
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: .25em;
+    box-sizing: border-box;
+}
+.character-grid a img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .character-grid a:hover {
-    background-color: #00000072;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
-
-
-
-/* formatting and styles for navigation bars  */
+/* navigation bar  */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -287,6 +284,7 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* styles role descriptions */
 #roles {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -296,7 +294,7 @@ nav ul li a:hover {
     list-style-image:  url(img/house-solid.svg);
 }
 
-
+/* imported google font for blockquote */
 .google-fonts {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -396,9 +394,9 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 550px){
-    .character-grid {
+    /* .character-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
-    }
+    } */
     main {
         padding: 0em;
     }
