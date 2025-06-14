@@ -373,8 +373,9 @@ nav ul li a:hover {
     border-collapse: collapse;
   }
 
+  /* hide table header on small screens */
   thead {
-    display: none; /* hide table header on small screens */
+    display: none; 
   }
 
   td {
@@ -394,9 +395,7 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 550px){
-    /* .character-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
-    } */
+
     main {
         padding: 0em;
     }
