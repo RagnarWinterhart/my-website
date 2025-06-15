@@ -12,7 +12,7 @@ body {
     margin: 0;
     background-color: #e0e000;
     background: linear-gradient(180deg, #23461800 0%, #000000 100%), url(img/map.jpg);
-    /* min-height: 100vh; */
+    min-height: 100vh; 
     box-sizing: border-box;
     display: block;
 }
@@ -32,6 +32,7 @@ footer {
     background: linear-gradient(90deg, #000000 30%, var(--red-color)70%);
     padding: 1.5em;
     color: #ffffff;
+    margin-top: auto;
 }
 
 /* main styling */
@@ -51,6 +52,27 @@ img {
     border-radius: 1em;
     width: 100%;
 }
+ 
+/* formatting for the map image and page */
+.map_wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.map_wrapper main {
+    flex: 0;
+}
+
+#map_main img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-left: -.5em;
+}
+
+/* formatting for the img in the header */
 
 #title_img {
     width: 40%;
@@ -328,6 +350,10 @@ nav ul li a:hover {
 }
 @media only screen and (max-width: 800px) {
 
+    main {
+        margin: 3em .5em;
+    }
+
     /* stacks grid elements in a single column */
     .grid-container {
         grid-template-columns: 1fr;
@@ -399,5 +425,6 @@ nav ul li a:hover {
 
     main {
         padding: 0em;
+        margin: 2em 0em;
     }
 }
