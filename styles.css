@@ -12,7 +12,7 @@ body {
     margin: 0;
     background-color: #e0e000;
     background: linear-gradient(180deg, #23461800 0%, #000000 100%), url(img/map.jpg);
-    min-height: 100vh; 
+    min-height: 100vh;
     box-sizing: border-box;
     display: block;
 }
@@ -52,7 +52,7 @@ img {
     border-radius: 1em;
     width: 100%;
 }
- 
+
 /* formatting for the map image and page */
 .map_wrapper {
     display: flex;
@@ -64,7 +64,7 @@ img {
     flex: 0;
 }
 
-#map_main img{
+#map_main img {
     width: 100%;
     height: auto;
     display: block;
@@ -219,6 +219,7 @@ a:hover {
     padding: .25em;
     box-sizing: border-box;
 }
+
 .character-grid a img {
     max-width: 100%;
     height: auto;
@@ -229,6 +230,7 @@ a:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
 /* navigation bar  */
 nav ul {
     list-style-type: none;
@@ -314,15 +316,15 @@ nav ul li a:hover {
 }
 
 .icon-list {
-    list-style-image:  url(img/house-solid.svg);
+    list-style-image: url(img/house-solid.svg);
 }
 
 /* imported google font for blockquote */
 .google-fonts {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* responsive design rules */
@@ -340,14 +342,16 @@ nav ul li a:hover {
         margin: 0 auto 1em auto;
     }
 }
+
 @media screen and (max-width: 915px) {
 
-      .details-container {
+    .details-container {
         flex-direction: column;
     }
 
-    
+
 }
+
 @media only screen and (max-width: 800px) {
 
     main {
@@ -376,7 +380,7 @@ nav ul li a:hover {
 
 @media only screen and (max-width: 770px) {
 
-    /* removoes cover image */
+    /* makes the cover image full width */
     #cover_img {
         display: block;
         width: 100%;
@@ -393,35 +397,41 @@ nav ul li a:hover {
 }
 
 @media (max-width: 700px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-    width: 100%;
-    font-size: 100%;
-    border-collapse: collapse;
-  }
 
-  /* hide table header on small screens */
-  thead {
-    display: none; 
-  }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+        font-size: 100%;
+        border-collapse: collapse;
+    }
 
-  td {
-    position: relative;
-    padding-left: 50%;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-  }
+    /* hide table header on small screens */
+    thead {
+        display: none;
+    }
 
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 1em;
-    top: 0.75em;
-    font-weight: bold;
-  }
+    td {
+        position: relative;
+        padding-left: 50%;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1em;
+        top: 0.75em;
+        font-weight: bold;
+    }
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px) {
 
     main {
         padding: 0em;
