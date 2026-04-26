@@ -60,12 +60,47 @@
                     <li>Olegton</li>
                 </ul>
                 <!-- nav to an external website -->
-                <h2>Kingdom Rules</h2>
+                <!-- <h2>Kingdom Rules</h2>
                 <p>For more information on the rules of the kingdom, please refer to the Pathfinder Kingmaker rules in
                     the link below.</p>
                 <h3><a href="https://aonprd.com/Rules.aspx?ID=1489" target="_blank"
-                        title="Full kingdom rules">Comprehensive Kingdom Rules</a></h3>
-                <p></p>
+                        title="Full kingdom rules">Comprehensive Kingdom Rules</a></h3> -->
+                
+                <!-- Dice Roller: allows user to roll multiple dice with optional modifier -->
+                <h2>Dice Roller</h2>
+                <button onclick="rollDice(20)">Roll d20</button>
+                <button onclick="rollDice(12)">Roll d12</button>
+                <button onclick="rollDice(10)">Roll d10</button>
+                <button onclick="rollDice(8)">Roll d8</button>
+                <button onclick="rollDice(6)">Roll d6</button>
+                <button onclick="rollDice(4)">Roll d4</button>
+                <input type="number" id="numDice" value="1" min="1" placeholder="number of dice">
+                <span>+</span>
+                <input type="number" id="modifier" placeholder="modifier">
+                <p id="result">Result: </p>
+                <script>
+                    // Rolls X number of Y-sided dice and applies an optional modifier to the total
+                    function rollDice(sides) {
+                        let numDice = parseInt(document.getElementById("numDice").value) || 1;
+                        let mod = parseInt(document.getElementById("modifier").value) || 0;
+
+                        let rolls = [];
+                        let total = 0; 
+
+                        // Roll multiple dice
+                        for (let i = 0; i < numDice; i++) {
+                            let roll = Math.floor(Math.random() * sides) + 1;
+                            rolls.push(roll);
+                            total += roll;
+                        }
+
+                        total += mod;
+
+                        // Display result
+                        document.getElementById("result").textContent =
+                            `Rolls: [${rolls.join(", ")}] + ${mod} = ${total}`;
+                    }
+                </script>
 
             </section>
             <section class="characters-section">
