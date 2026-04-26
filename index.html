@@ -74,33 +74,13 @@
                 <button onclick="rollDice(8)">Roll d8</button>
                 <button onclick="rollDice(6)">Roll d6</button>
                 <button onclick="rollDice(4)">Roll d4</button>
-                <input type="number" id="numDice" value="1" min="1" placeholder="number of dice">
+                <input type="number" id="numDice" value="1" min="1" max="20" placeholder="num">
                 <span>+</span>
-                <input type="number" id="modifier" placeholder="modifier">
+                <input type="number" id="modifier" value="0" min="-100" max="100" placeholder="mod">
                 <p id="result">Result: </p>
-                <script>
-                    // Rolls X number of Y-sided dice and applies an optional modifier to the total
-                    function rollDice(sides) {
-                        let numDice = parseInt(document.getElementById("numDice").value) || 1;
-                        let mod = parseInt(document.getElementById("modifier").value) || 0;
-
-                        let rolls = [];
-                        let total = 0; 
-
-                        // Roll multiple dice
-                        for (let i = 0; i < numDice; i++) {
-                            let roll = Math.floor(Math.random() * sides) + 1;
-                            rolls.push(roll);
-                            total += roll;
-                        }
-
-                        total += mod;
-
-                        // Display result
-                        document.getElementById("result").textContent =
-                            `Rolls: [${rolls.join(", ")}] + ${mod} = ${total}`;
-                    }
-                </script>
+                <h3>Roll History</h3>
+                <ul id="history"></ul>
+                <button onclick="clearHistory()">Clear History</button>
 
             </section>
             <section class="characters-section">
@@ -137,6 +117,7 @@
             content. This website, is not published, endorsed, or specifically approved by Paizo. For more information
             about Paizo Inc. and Paizo products, visit <a href="http://paizo.com/">paizo.com</a>.</p>
     </footer>
+    <script src="diceroll.js"></script>
 </body>
 
 </html>
