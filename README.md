@@ -16,5 +16,3 @@ It details some of the statistics of the kingdom as long as the characters that 
 4. Readjusted home page breakpoint to shrink image and display above text instead of setting to "display: none"
 5. Changed font and added contrast for title
 6. Added pictures for companions, in process for leaders...
-
-## Git revert test
