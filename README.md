@@ -1,4 +1,4 @@
-# Kintsugi Webpage
+# Kintsugi Codex
 
 **By Rowan Lynn**
 
